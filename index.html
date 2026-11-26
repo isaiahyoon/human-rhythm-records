@@ -40,7 +40,7 @@
         <div class="hero-copy">
           <div class="eyebrow"><svg class="inline-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 2v20M2 12h20M5 5l14 14M19 5 5 19"/></svg> HUMAN RHYTHM RECORDS / EST. IN THE GROOVE</div>
           <h1 id="hero-title">Feel it.<br />Keep it<br /><em>spinning.</em></h1>
-          <p>Deep grooves, live-wire soul, and a little room to breathe. Good music is on the way.</p>
+          <p>Deep grooves, live-wire soul, and a little room to breathe. Hear Jae Stae’s “Field Pulling Mustard” in the listening room.</p>
           <div class="hero-links"><a class="button button-dark" href="#listening-room">Enter the listening room <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6"/></svg></a><a class="hero-room-link" href="#our-story">Get to know us</a></div>
           <div class="hero-footnote"><svg class="inline-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/></svg> Music for coming back to yourself.</div>
         </div>
@@ -68,24 +68,26 @@
             <div class="deck-topline"><span class="deck-brand">human rhythm <small>RECORDS / LISTENING ROOM</small></span><span class="deck-model">HRR—001</span></div>
             <div class="deck-view-controls" role="group" aria-label="Artwork view"><button class="active" type="button" data-view="platter" aria-pressed="true">On the platter</button><button type="button" data-view="sleeve" aria-pressed="false">The sleeve</button></div>
             <div class="deck-stage">
-              <div class="room-platter" data-deck-part="platter" aria-hidden="true"><div class="platter-label placeholder-label"><span>HRR</span><i></i></div></div>
+              <div class="room-platter" data-deck-part="platter" aria-hidden="true"><div class="platter-label placeholder-label"><span>JAE<br />STAE</span><i></i></div></div>
               <svg class="room-tonearm" data-deck-part="platter" viewBox="0 0 600 360" fill="none" aria-hidden="true"><defs><linearGradient id="arm-metal" x2="1" y2="1"><stop stop-color="#b6a8b7"/><stop offset=".45" stop-color="#e6dfd6"/><stop offset="1" stop-color="#786e79"/></linearGradient></defs><circle cx="491" cy="68" r="32" fill="#29252e" stroke="#847184" stroke-width="2"/><circle cx="491" cy="68" r="21" fill="url(#arm-metal)"/><path d="m491 68-22 26v102l-63 63" stroke="#0f0d13" stroke-width="14" stroke-linecap="round"/><path d="m491 68-22 26v102l-63 63" stroke="url(#arm-metal)" stroke-width="8" stroke-linecap="round"/><path d="m410 246-17 17" stroke="#ebc4d2" stroke-width="16"/><path d="m391 267-7 7" stroke="#e8d6a8" stroke-width="3"/><circle cx="491" cy="68" r="5" fill="#4a414c"/></svg>
-              <div class="room-sleeve placeholder-sleeve" data-deck-part="sleeve" aria-hidden="true" hidden><span>HUMAN<br />RHYTHM</span><small>ARTWORK COMING SOON</small></div>
+              <div class="room-sleeve placeholder-sleeve" data-deck-part="sleeve" aria-hidden="true" hidden><span>FIELD<br />PULLING<br />MUSTARD</span><small>JAE STAE / DIGITAL SINGLE</small></div>
               <span class="deck-speed" aria-hidden="true">33⅓ <small>RPM</small></span><span class="deck-stereo" aria-hidden="true">STEREO<br /><span>● ●</span></span>
             </div>
-            <div class="receiver-panel"><div class="receiver-display"><span>IN THE LISTENING ROOM</span><strong>Track coming soon</strong><small>ARTWORK PREVIEW · NO AUDIO YET</small></div></div>
+            <div class="receiver-panel"><div class="receiver-display"><span>NOW IN THE LISTENING ROOM</span><strong>Field Pulling Mustard</strong><small>JAE STAE · MP3 SINGLE</small></div></div>
             <div class="deck-bottomline"><span><i></i> INDEPENDENT SPIRIT. ANALOG SOUL.</span><span>DESIGNED TO TAKE YOUR TIME.</span></div>
           </div>
           <div class="room-selection">
-            <span class="eyebrow">THE FIRST TRACK / COMING SOON</span>
-            <h3>Something<br />is on its way<span class="title-dot">.</span></h3>
-            <p class="room-artist">Track title & artist to be announced</p>
-            <p class="room-description">One track, made to be heard up close. The audio and high-fidelity download will be available here when the release is ready.</p>
+            <span class="eyebrow">NOW IN ROTATION / DIGITAL SINGLE</span>
+            <h3>Field Pulling<br />Mustard<span class="title-dot">.</span></h3>
+            <p class="room-artist">Jae Stae</p>
+            <p class="room-description">A little preview for the first listen. Keep the full 320 kbps MP3 for $1.99.</p>
             <div class="single-actions">
-              <button class="button single-preview-button" type="button" disabled>Play preview</button>
-              <button class="button single-download-button" type="button" disabled>Download coming soon</button>
+              <button class="button single-preview-button" id="preview-track" type="button" aria-controls="track-preview">Play 30-second preview</button>
+              <button class="button single-download-button single-buy-button" id="buy-track" type="button">Buy MP3 download · $1.99</button>
+              <button class="button single-download-button" id="download-track" type="button" hidden>Download your MP3</button>
             </div>
-            <p class="single-status">Audio and checkout are not available yet.</p>
+            <audio id="track-preview" preload="none" src="/audio/field-pulling-mustard-preview.mp3"></audio>
+            <p class="single-status" id="single-status" aria-live="polite">Secure checkout powered by Stripe.</p>
           </div>
         </div>
       </section>

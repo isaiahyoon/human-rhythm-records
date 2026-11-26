@@ -1142,6 +1142,9 @@ dialog::backdrop { background: #16120ed9; backdrop-filter: blur(3px); }
 .single-actions .button:disabled { opacity: 1; cursor: not-allowed; transform: none; }
 .single-preview-button:disabled { background: #eee0cf; color: #443c30; border-color: #eee0cf; }
 .single-download-button:disabled { color: #f5e6bf; border: 1px solid #ad9c78; }
+.single-actions [hidden] { display: none; }
+.single-buy-button { background: #ffdf00; color: #171310; border-color: #ffdf00; }
+.single-buy-button:hover { background: #f31387; border-color: #f31387; color: #fff8e8; }
 .single-status { margin-top: 14px; color: #e4d7bd; font-size: 11px; line-height: 1.6; }
 
 @media (max-width: 560px) {

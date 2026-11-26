@@ -1,0 +1,16 @@
+name = "human-rhythm-records"
+compatibility_date = "2026-11-25"
+main = "src/worker.js"
+keep_vars = true
+
+[vars]
+STRIPE_PRICE_ID = "price_1UfrB1KC9sEKraccFSxMLMA0"
+
+[assets]
+directory = "./dist"
+binding = "ASSETS"
+run_worker_first = ["/api/*"]
+
+[[r2_buckets]]
+binding = "AUDIO_BUCKET"
+bucket_name = "human-rhythm-records-audio"

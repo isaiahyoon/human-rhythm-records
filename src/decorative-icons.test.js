@@ -67,14 +67,24 @@ test('storefront identity and supplied artwork belong to Human Rhythm Records', 
   assert.doesNotMatch(singleHtml, /Psalm 32/i);
 });
 
-test('single-track placeholder does not offer unavailable audio or checkout', () => {
-  assert.match(singleHtml, /<button[^>]*disabled>Play preview<\/button>/);
-  assert.match(singleHtml, /<button[^>]*disabled>Download coming soon<\/button>/);
-  assert.match(singleHtml, /Audio and checkout are not available yet/);
+test('single track offers a preview and a Stripe-priced MP3 download', () => {
+  assert.match(singleHtml, /Field Pulling<br \/>Mustard/);
+  assert.match(singleHtml, /Jae Stae/);
+  assert.match(singleHtml, /Play 30-second preview/);
+  assert.match(singleHtml, /Buy MP3 download · \$1\.99/);
+  assert.match(singleHtml, /\/audio\/field-pulling-mustard-preview\.mp3/);
   assert.doesNotMatch(singleHtml, /The Long Way Home|shopping bag|free U\.S\. shipping/i);
 });
 
 test('platter and sleeve views remain mutually exclusive', () => {
+  const controls = new Map();
+  const element = () => ({
+    dataset: {},
+    classList: { toggle() {} },
+    addEventListener() {},
+    setAttribute() {},
+    toggleAttribute() {},
+  });
   const buttons = ['platter', 'sleeve'].map((view) => ({
     dataset: { view },
     classList: { toggle(_name, active) { this.active = active; } },
@@ -86,9 +96,17 @@ test('platter and sleeve views remain mutually exclusive', () => {
     toggleAttribute(_name, hidden) { this.hidden = hidden; },
   }));
   const document = {
+    querySelector(selector) {
+      if (!controls.has(selector)) controls.set(selector, element());
+      return controls.get(selector);
+    },
     querySelectorAll(selector) { return selector === '[data-view]' ? buttons : parts; },
   };
-  runInContext(single.replace(/^import .*;\n/gm, ''), createContext({ document }));
+  runInContext(single.replace(/^import .*;\n/gm, ''), createContext({
+    document,
+    window: { location: { search: '' } },
+    URLSearchParams,
+  }));
   buttons[1].click();
   assert.deepEqual(parts.map((part) => part.hidden), [true, true, false]);
   assert.deepEqual(buttons.map((button) => button.pressed), ['false', 'true']);
