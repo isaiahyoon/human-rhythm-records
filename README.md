@@ -17,6 +17,10 @@ npm run preview
 
 Vite prints the local URL. This is a vanilla JavaScript app. Google Fonts are optional; system fallbacks work offline.
 
+## Continuous integration
+
+GitHub Actions runs the Node.js test suite and production build on every push and pull request.
+
 ## Listening room and Stripe checkout
 
 The listening room features “Field Pulling Mustard” by Jae Stae. A 30-second preview is public; the full 320 kbps MP3 is served from a private Cloudflare R2 bucket only after the Stripe Checkout session is verified as paid. The checkout price is USD $1.99.
