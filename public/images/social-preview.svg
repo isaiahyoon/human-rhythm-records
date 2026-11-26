@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#fff5df"/>
+  <path d="M0 0h1200v38H0z" fill="#f41077"/>
+  <path d="M0 38h1200v12H0z" fill="#05c8d6"/>
+  <circle cx="1018" cy="345" r="290" fill="#ffdd00"/>
+  <circle cx="1030" cy="335" r="255" fill="none" stroke="#11100e" stroke-width="2" stroke-dasharray="2 7"/>
+  <g fill="#11100e">
+    <text x="64" y="106" font-family="Arial,sans-serif" font-size="15" font-weight="700" letter-spacing="3">INDEPENDENT SPIRIT. ANALOG SOUL.</text>
+    <image href="/images/hrr/hrr-logo.png" x="48" y="132" width="310" height="212" preserveAspectRatio="xMidYMid meet"/>
+    <text x="64" y="406" font-family="Arial,sans-serif" font-size="68" font-weight="900" letter-spacing="-2">FEEL IT.</text>
+    <text x="64" y="475" font-family="Arial,sans-serif" font-size="68" font-weight="900" letter-spacing="-2">KEEP IT SPINNING.</text>
+    <text x="68" y="531" font-family="Arial,sans-serif" font-size="18" font-weight="600" letter-spacing="1">DEEP GROOVES. GOOD COMPANY.</text>
+  </g>
+  <image href="/images/hrr/acid-jazz-sessions.png" x="635" y="85" width="510" height="510" transform="rotate(4 890 340)"/>
+  <image href="/images/hrr/groove-gospel-orchestra.png" x="858" y="355" width="218" height="218" transform="rotate(-7 967 464)"/>
+  <path d="M0 596h1200v34H0z" fill="#11100e"/>
+  <text x="64" y="619" fill="#fff5df" font-family="Arial,sans-serif" font-size="12" font-weight="700" letter-spacing="2">SOUL / JAZZ / FUNK / HUMAN RHYTHM RECORDS</text>
+</svg>
