@@ -40,6 +40,10 @@ After payment, the buyer returns to a page with the download button. This implem
 
 The preview file is generated from the supplied MP3 at `public/audio/field-pulling-mustard-preview.mp3`; the full original audio is intentionally not stored in the public build. The supplied HRR artwork remains in `public/images/hrr/`.
 
+## License
+
+Copyright (c) 2026 Isaiah Yoon. All rights reserved. No permission is granted to use, copy, modify, or distribute this project or its associated materials without prior written permission from Isaiah Yoon. See [LICENSE](./LICENSE).
+
 ## Saved vinyl storefront
 
 The previous fictional vinyl-shop demo is preserved in `archive/vinyl-storefront.html`, with its existing `src/main.js`, `src/catalog.js`, and `src/shop.js`. It is not included in the production site. To restore it for future development, replace the root `index.html` with the archived HTML; it uses the same stylesheet and public assets. Its checkout and newsletter are demos, not live services.
