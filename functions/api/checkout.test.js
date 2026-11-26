@@ -31,6 +31,7 @@ test('checkout creates a fixed-price Stripe session for the track', async () => 
     assert.match(calls[0], /\/v1\/prices\/price_123\?expand\[\]=product$/);
     assert.equal(requestBody.get('line_items[0][price]'), 'price_123');
     assert.equal(requestBody.get('metadata[product_id]'), 'field-pulling-mustard');
+    assert.equal(requestBody.get('managed_payments[enabled]'), 'false');
   } finally {
     globalThis.fetch = originalFetch;
   }

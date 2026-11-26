@@ -57,6 +57,7 @@ export async function onRequestPost({ request, env }) {
   const origin = new URL(request.url).origin;
   const form = new URLSearchParams({
     mode: 'payment',
+    'managed_payments[enabled]': 'false',
     success_url: `${origin}/?purchase=success&session_id={CHECKOUT_SESSION_ID}#listening-room`,
     cancel_url: `${origin}/?purchase=cancelled#listening-room`,
     'line_items[0][quantity]': '1',

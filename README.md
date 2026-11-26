@@ -21,6 +21,8 @@ Vite prints the local URL. This is a vanilla JavaScript app. Google Fonts are op
 
 The listening room features “Field Pulling Mustard” by Jae Stae. A 30-second preview is public; the full 320 kbps MP3 is served from a private Cloudflare R2 bucket only after the Stripe Checkout session is verified as paid. The checkout price is USD $1.99.
 
+Checkout uses standard Stripe payments, with Managed Payments disabled for the session even if enabled by default on the account. This integration does not calculate tax.
+
 To enable live checkout and downloads:
 
 1. Upload the original MP3 to the private R2 bucket `human-rhythm-records-audio` as `field-pulling-mustard.mp3`:
